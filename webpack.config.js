@@ -63,18 +63,29 @@ Encore
     // enables Sass/SCSS support
     .enableSassLoader()
 
-    // uncomment if you use TypeScript
-    //.enableTypeScriptLoader()
+// uncomment if you use TypeScript
+//.enableTypeScriptLoader()
 
-    // uncomment if you use React
-    //.enableReactPreset()
+// uncomment if you use React
+//.enableReactPreset()
 
-    // uncomment to get integrity="..." attributes on your script & link tags
-    // requires WebpackEncoreBundle 1.4 or higher
-    //.enableIntegrityHashes(Encore.isProduction())
+// uncomment to get integrity="..." attributes on your script & link tags
+// requires WebpackEncoreBundle 1.4 or higher
+//.enableIntegrityHashes(Encore.isProduction())
 
-    // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
-    ;
+// uncomment if you're having problems with a jQuery plugin
+//.autoProvidejQuery()
 
-module.exports = Encore.getWebpackConfig();
+// .autoProvideVariables({
+//     $: 'jquery',
+//     jQuery: 'jquery'
+// });
+
+
+const fullConfig = Encore.getWebpackConfig();
+fullConfig.devServer = {
+    watchFiles: {
+        paths: ["templates/**/*.html.twig"],
+    },
+};
+module.exports = fullConfig;
