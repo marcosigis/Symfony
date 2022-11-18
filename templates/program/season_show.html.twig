@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h1>suka</h1>
+
+           
+<ul>
+{% for episode in episodes %}
+<li> {{ episode.title }} </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

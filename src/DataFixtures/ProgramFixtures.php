@@ -25,7 +25,9 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
             $program->setSynopsis($value[1]);
             $program->setCategory($this->getReference($value[2]));
             $program->setPoster($value[3]);
+            $program->setSlug(urlencode(str_replace(' ', '-', $program->getTitle())));
             $manager->persist($program);
+            $this->addReference('program_' . $program->getSlug(), $program);
         }
         $manager->flush();
     }

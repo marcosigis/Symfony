@@ -1,5 +1,5 @@
 <?php
-// src/Controller/CategoryController.php
+// src/Controller/SeasonController.php
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -7,8 +7,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Repository\CategoryRepository;
 
-#[Route('/category', name: 'category_')]
-class CategoryController extends AbstractController
+#[Route('/season', name: 'season_')]
+class SeasonController extends AbstractController
 {
     #[Route('/', name: 'index')]
     public function index(CategoryRepository $categoryRepository): Response

@@ -1,11 +1,19 @@
 {% block navbar %}
 <header>
-<nav class="navbar navbar-light bg-light">
+{# <nav class="navbar navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand text-primary" href="/">Home</a>
     <a class="navbar-brand" href="/program/">Program</a>
     <a class="navbar-brand" href="/category/">Category</a>
   </div>
-</nav>
-
+</nav> #}
+<div class="topnav" id="myTopnav">
+  <a href="/" class="active">Home</a>
+  <a href="/program/">Tv Shows</a>
+  <a href="/category/">Categories</a>
+  <a href="javascript:void(0);" class="icon">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</header>
 {% endblock %}

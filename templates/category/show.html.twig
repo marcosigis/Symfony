@@ -14,9 +14,9 @@
             <p>{{ program.synopsis }}</p>
             <a href="{{ path("program_show", { id: program.id }) }}">See the details</a>
         </div>
-    {% else %}
-        No series found in this category.
-    {% endfor %}
+        {% else %}
+            No series found in this category.
+        {% endfor %}
 
     <br><a href="{{ path('category_index') }}">
         Go back to the Categories
