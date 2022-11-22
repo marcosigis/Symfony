@@ -25,7 +25,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('headerJs', './assets/header.js')
+    .addEntry('headerJs', './assets/scripts/header.js')
     .addEntry('swiper', './assets/scripts/swiper.js')
     .addEntry('headerCss', './assets/styles/header.scss')
     .addEntry('programCss', './assets/styles/programCss.scss')

@@ -46,7 +46,6 @@ class ProgramController extends AbstractController
     #[Route('/show/{slug}', name: 'show')]
     public function show(?Program $program): Response
     {
-
         if (!$program) {
             throw $this->createNotFoundException(
                 'No program found in program\'s table.'
@@ -62,10 +61,7 @@ class ProgramController extends AbstractController
     #[Entity('season', options: ['id' => 'seasonId'])]
     public function showSeason(Program $program, Season $season): Response
     {
-
         $episodes = $season->getEpisodes();
-
-
         return $this->render('program/season_show.html.twig', [
             'program' => $program, 'season' => $season, 'episodes' => $episodes,
         ]);
