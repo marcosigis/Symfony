@@ -2,12 +2,12 @@
 
 
 {% block body %}
-<h1>suka</h1>
-
            
 <ul>
 {% for episode in episodes %}
 <li> {{ episode.title }} </li>
+<a href="{{ path("program_episode_show", { slug: program.slug, seasonId: season.id, episodeId: episode.id }) }}">Go to episode</a>
+
 {% endfor %}
 </ul>
 

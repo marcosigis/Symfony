@@ -26,7 +26,10 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('headerJs', './assets/header.js')
+    .addEntry('swiper', './assets/scripts/swiper.js')
     .addEntry('headerCss', './assets/styles/header.scss')
+    .addEntry('programCss', './assets/styles/programCss.scss')
+    .addEntry('programShow', './assets/styles/programShow.scss')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

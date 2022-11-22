@@ -39,14 +39,14 @@ class CategoryRepository extends ServiceEntityRepository
         }
     }
 
-    public function findOneByName($categoryName): ?Category
-    {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.name = :name')
-            ->setParameter('name', $categoryName)
-            ->getQuery()
-            ->getOneOrNullResult();
-    }
+    // public function findOneByName($categoryName): ?Category
+    // {
+    //     return $this->createQueryBuilder('c')
+    //         ->andWhere('c.name = :name')
+    //         ->setParameter('name', $categoryName)
+    //         ->getQuery()
+    //         ->getOneOrNullResult();
+    // }
 
 
     //    /**

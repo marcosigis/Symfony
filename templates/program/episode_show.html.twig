@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<h1>{{ program.title }}</h1>
+
+<h2>Season # {{ season.number }}</h2>
+
+
+<h2>Episode # {{ episode.number }} </h2>
+<h3> {{ episode.title }} </h3>
+<p> {{ episode.synopsis }} </p>
+
+{% if (episode.number > 1) %}
+<a href="{{ path("program_episode_show", { slug: program.slug, seasonId: season.id, episodeId: episode.id-1 }) }}">Previous episode</a>
+{% endif %}
+
+
+{% set epCount = 0 %}
+{% for ep in totep %}
+{% set epCount = epCount + 1 %}
+{% endfor %}
+
+
+{% if (episode.number < epCount) %}
+<a href="{{ path("program_episode_show", { slug: program.slug, seasonId: season.id, episodeId: episode.id+1 }) }}">Next episode</a>
+{% endif %}
+
+{% endblock %}
